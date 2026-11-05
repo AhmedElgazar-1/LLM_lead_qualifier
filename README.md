@@ -98,6 +98,20 @@ On the first launch it will ask you to describe your company and tick which type
 
 The table shows 25 rows at a time. Press **Show More** to see the next batch.
 
+## Try it yourself
+
+There is a small test file in this repo called `sample_companies.csv`. It has a mix of well-known companies (software, logistics, consumer brands, consultancies, a bank, a university and so on) plus one deliberately broken link, so you can see how different cases come out. You still need your own Gemini API key, as described above.
+
+1. Start the app and load `sample_companies.csv` with **Browse Sheet**.
+2. When it asks about your company, you can paste this example:
+
+   > We sell warehouse and inventory management software to businesses that run warehouses or distribution networks. Our customers are manufacturers, retailers and logistics companies that struggle with stock accuracy, slow order picking and managing inventory across several locations. We want to find companies with large physical operations that would benefit from better inventory tracking.
+
+3. Tick **B2B** only, and run it.
+4. Run it again with **B2C** ticked, or with professional services included, and compare. The same list should sort differently.
+
+Your results may differ from mine, because an AI is judging live website text. Some big sites also block automated visits, so a few rows may come back as errors or Needs Review. That is expected, not a bug.
+
 ## Your spreadsheet
 
 Your file needs one column with company websites. A column with company names is helpful but not required. Your other columns are kept and come back in the export next to the new AI columns.
@@ -108,6 +122,7 @@ Your file needs one column with company websites. A column with company names is
 |---|---|
 | `app.py` | The window, buttons and tables (PyQt5) |
 | `b2b_engine.py` | Website scraping and the Gemini evaluation |
+| `sample_companies.csv` | A small test list to try the app with |
 | `.env` | Your API key. You create this, and it stays private |
 | `config.json` | Created by the app to remember your settings. It never stores the API key |
 | `crash_log.txt` | Created only if the app hits an unexpected error |
