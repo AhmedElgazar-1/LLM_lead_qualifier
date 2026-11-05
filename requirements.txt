@@ -1,0 +1,10 @@
+PyQt5
+pandas
+openpyxl
+requests
+urllib3
+beautifulsoup4
+lxml
+langchain-core
+langchain-google-genai
+python-dotenv
